@@ -1,6 +1,6 @@
-import type {Product} from "@/models/product";
+import type { Product } from '@/models/product'
 
-export interface CartProduct{
-    product: Product;
-    quantity: number;
+export interface CartProduct {
+  product: Product
+  quantity: number
 }

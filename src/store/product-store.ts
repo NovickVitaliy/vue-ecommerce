@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 import type { Product } from "@/models/product";
 import { ref } from "vue";
+import type { ProductsRequest } from '@/models/product-request'
 // import { ApiService } from '@/services/api-service'
 
 // example of fetching products from ApiService
@@ -27,7 +28,7 @@ export const useProductsStore = defineStore('products', () => {
   const products = ref<Product[]>([]);
 
   //TODO: change from any to request model
-  function getProducts(productsRequest: PaymentRequest) {
+  function getProducts(productsRequest: ProductsRequest) {
     // actual request to api
   }
 

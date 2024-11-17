@@ -10,7 +10,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
 
     <!-- Основний контент сторінки -->
     <div class="content">
-      <!-- Основний контент тут -->
+      <RouterView></RouterView>
     </div>
 
     <!-- компонент FooterComponent -->

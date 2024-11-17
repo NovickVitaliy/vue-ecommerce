@@ -7,23 +7,15 @@
       </b-navbar-item>
     </template>
     <template #start>
-      <b-navbar-item href="#">
+      <b-navbar-item tag="router-link" :to="{path: '/home'}">
         Home
       </b-navbar-item>
-      <b-navbar-item href="#">
+      <b-navbar-item tag="router-link" :to="{path: '/catalog'}">
         Catalog
       </b-navbar-item>
-      <b-navbar-item href="#">
+      <b-navbar-item tag="router-link" :to="{path: '/favourites'}">
         Favorites
       </b-navbar-item>
-      <b-navbar-dropdown label="Info">
-        <b-navbar-item href="#">
-          About
-        </b-navbar-item>
-        <b-navbar-item href="#">
-          Contact
-        </b-navbar-item>
-      </b-navbar-dropdown>
     </template>
 
     <template #end>

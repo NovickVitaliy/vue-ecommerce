@@ -6,6 +6,7 @@ import {useProductsStore} from "@/store/product-store";
 import {computed} from "vue";
 import {ApiService} from "@/services/api-service";
 import type {ProductRequest} from "@/models/product-request";
+import {useRoute, useRouter} from "vue-router";
 const pageSize = 12;
 
 const titleFilter = ref<string | null>(null);
@@ -19,6 +20,22 @@ const productsStore = useProductsStore();
 const products = computed(() => productsStore.products);
 
 ApiService.fetchCategories().then((ctgs) => categories.value = ctgs);
+
+const router = useRouter();
+const route = useRoute();
+
+const updateQueryParams = () => {
+  router.push({
+    query: {
+      title: titleFilter.value,
+      minPrice: minPriceFilter.value?.toString() || '',
+      maxPrice: maxPriceFilter.value?.toString() || '',
+      category: categoryFilter.value?.toString() || '',
+      page: currentPage.value.toString()
+    }
+  });
+};
+
 
 const loadProducts = () => {
   productsStore.getProducts({
@@ -34,11 +51,13 @@ const loadProducts = () => {
 const goToPage = (pageNumber: number) => {
   currentPage.value = pageNumber;
   loadProducts();
+  updateQueryParams();
 };
 
 watch([titleFilter, minPriceFilter, maxPriceFilter, categoryFilter], () => {
   currentPage.value = 1;
   loadProducts();
+  updateQueryParams();
 });
 
 productsStore.getProducts({

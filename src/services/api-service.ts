@@ -71,6 +71,6 @@ export class ApiService {
 
     static async fetchCategories(): Promise<Category[]> {
         const response = await axios.get<Category[]>(`${API_URL}/categories`)
-        return response.data.slice(1, 5);
+        return response.data;
     }
 }

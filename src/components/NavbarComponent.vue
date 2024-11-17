@@ -18,7 +18,7 @@
     </template>
 
     <template #end>
-      <b-navbar-item tag="div">
+      <b-navbar-item tag="router-link" :to="{path: '/cart'}">
         <div class="buttons">
           <!-- Кнопка з іконкою корзини -->
           <a class="button is-light">

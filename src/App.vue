@@ -1,4 +1,7 @@
 <script setup lang="ts">
+
+</script>
+
 import NavbarComponent from './components/NavbarComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
 </script>

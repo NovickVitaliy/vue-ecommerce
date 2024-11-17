@@ -2,7 +2,7 @@
   <div class="not-found">
     <h1 class="not-found__title">404</h1>
     <p class="not-found__message">Page does not exist.</p>
-    <RouterLink to="/" class="not-found__link">Go back to Home</RouterLink>
+    <RouterLink to="/home" class="not-found__link">Go back to Home</RouterLink>
   </div>
 </template>
 

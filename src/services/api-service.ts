@@ -25,7 +25,7 @@ export class ApiService {
                 price_min: minPrice,
                 price_max: maxPrice,
                 categoryId,
-                offset: (productRequest.pageNumber - 1) * productRequest.pageSize,
+                offset: (productRequest.pageNumber! - 1) * productRequest.pageSize!,
                 limit: productRequest.pageSize
             };
 
@@ -46,7 +46,7 @@ export class ApiService {
 
     static async fetchAndSortProducts(
         productRequest: ProductRequest,
-        sortType: SortType = SortType.BY_ID
+        sortType: SortType | null = SortType.BY_ID
     ): Promise<Product[]> {
         try {
             let products = await this.fetchProducts(productRequest);

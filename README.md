@@ -1,42 +1,94 @@
-# vue-ecommerce-app
 
-This template should help get you started developing with Vue 3 in Vite.
+# E-commerce Vue Project
 
-## Recommended IDE Setup
+A simple Vue.js e-commerce application.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Prerequisites
 
-## Type Support for `.vue` Imports in TS
+Before you begin, make sure you have the following installed:
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [Vue CLI](https://cli.vuejs.org/)
 
-## Customize configuration
+## Installation
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Follow these steps to get the project up and running:
 
-## Project Setup
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/e-commerce-vue.git
+   ```
 
-```sh
-npm install
+2. **Navigate to the project directory:**
+   ```bash
+   cd e-commerce-vue
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+## Running the Project
+
+To start the development server, run:
+
+```bash
+npm run serve
 ```
 
-### Compile and Hot-Reload for Development
+After the server starts, you can view the application in your browser at:
 
-```sh
-npm run dev
+```
+http://localhost:8080
 ```
 
-### Type-Check, Compile and Minify for Production
+## Build for Production
 
-```sh
+To build the project for production, use:
+
+```bash
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+The compiled files will be located in the `dist/` folder.
 
-```sh
+## Linting
+
+To lint and fix files, use:
+
+```bash
 npm run lint
 ```
 
+## Project Structure
 
-change
+```
+e-commerce-vue/
+├── public/            # Static assets
+├── src/
+│   ├── assets/        # Images, styles, etc.
+│   ├── components/    # Vue components
+│   ├── views/         # Pages
+│   ├── router/        # App routing
+│   └── store/         # Vuex store (optional)
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+## Technologies Used
+
+- Vue.js
+- Vue Router
+- Pinia
+
+## Contact
+
+For any issues or suggestions, please feel free to reach out.
+
+### novickvitaliy@gmail.com
+
+### +380956213424
+
+Every day, every night, 24/7 :)

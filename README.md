@@ -69,12 +69,14 @@ e-commerce-vue/
 ├── src/
 │   ├── assets/        # Images, styles, etc.
 │   ├── components/    # Vue components
-│   ├── views/         # Pages
-│   ├── router/        # App routing
-│   └── store/         # Vuex store (optional)
+│   ├── models/        # App Models
+│   ├── router/        # App Routing
+│   ├── services/      # App Serice
+│   └── store/         # Pinia store
 ├── .gitignore
 ├── package.json
-└── README.md
+├── README.md
+└── ...
 ```
 
 ## Technologies Used

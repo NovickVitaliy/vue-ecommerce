@@ -31,7 +31,7 @@ export const useFavouriteProductsStore = defineStore('favourite-products', () =>
 
   function isInFavourites(id: number) {
     const item = favouriteProducts.value.find((i) => i.id === id)
-    return item !== null
+    return item !== undefined
   }
 
   return {

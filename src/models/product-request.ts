@@ -1,4 +1,4 @@
-export interface ProductsRequest {
+export interface ProductRequest {
   titleQuery?: string;
   minPrice?: number;
   maxPrice?: number;

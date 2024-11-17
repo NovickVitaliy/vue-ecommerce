@@ -1,6 +1,6 @@
 import axios from "axios";
 import type { Product } from "@/models/product";
-import type { ProductsRequest } from '@/models/product-request'
+import type { ProductRequest } from '@/models/product-request'
 
 const API_URL = "https://api.escuelajs.co/api/v1";
 
@@ -19,7 +19,7 @@ export class ApiService {
     }
   }
 
-  static async getProducts(productsRequest: ProductsRequest): Promise<Product[]> {
+  static async getProducts(productsRequest: ProductRequest): Promise<Product[]> {
     let filteredProducts = (await this.fetchProducts());
 
     // Filter by title if provided

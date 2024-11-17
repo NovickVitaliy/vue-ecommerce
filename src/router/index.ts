@@ -12,6 +12,7 @@ const router = createRouter({
         {path: '/catalog', component: ProductCatalog},
         {path: '/favourites', component: FavouriteProductsList},
         {path: '/cart', component: CartComponent},
+        {path: '/vue-ecommerce', component: HomeComponent},
         {path: '/:catchAll(.*)', component: ErrorComponent},
     ],
     linkActiveClass: 'link_active',

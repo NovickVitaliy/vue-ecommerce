@@ -8,7 +8,7 @@ export const useCartStore = defineStore('cart', () => {
     const cart = ref<Cart>(getCartFromStorageOrDefault());
     function getCartFromStorageOrDefault(): Cart {
         const storedCart = localStorage.getItem(cartStorageKey);
-        return storedCart ? JSON.parse(storedCart) || {products: [], totalItems: 0};
+        return storedCart ? JSON.parse(storedCart) : {products: [], totalItems: 0};
     }
 
     function saveToStorage() {
@@ -24,21 +24,26 @@ export const useCartStore = defineStore('cart', () => {
     }
 
     function addItemToCart(product: Product){
-        const item = cart.value.products.filter(i => i.id === product.id)[0];
+        const item = cart.value.products.filter(i => i.product.id === product.id)[0];
         if(item){
             item.quantity++;
         } else {
-            cart.value.products.push(product);
+            cart.value.products.push({product: product,quantity:1});
         }
         updateTotalItems();
         saveToStorage();
     }
 
     function removeItemFromCart(id: number){
-        cart.value.products = cart.value.products.filter(i => i.id !== id);
+        cart.value.products = cart.value.products.filter(i => i.product.id !== id);
         updateTotalItems();
         saveToStorage();
     }
 
-    return { getCart, addItemToCart, removeItemFromCart }
+    function isItemInCart(id: number){
+        const item = cart.value.products.filter(x => x.product.id === id)[0];
+        return item !== undefined;
+    }
+
+    return { getCart, addItemToCart, removeItemFromCart, isItemInCart }
 });

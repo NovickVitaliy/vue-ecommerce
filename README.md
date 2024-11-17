@@ -16,12 +16,12 @@ Follow these steps to get the project up and running:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/e-commerce-vue.git
+   git clone https://github.com/NovickVitaliy/vue-ecommerce
    ```
 
 2. **Navigate to the project directory:**
    ```bash
-   cd e-commerce-vue
+   cd vue-ecommerce
    ```
 
 3. **Install dependencies:**
@@ -40,7 +40,7 @@ npm run serve
 After the server starts, you can view the application in your browser at:
 
 ```
-http://localhost:8080
+http://localhost:5000
 ```
 
 ## Build for Production

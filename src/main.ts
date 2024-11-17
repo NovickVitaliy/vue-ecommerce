@@ -20,6 +20,6 @@ const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.use(createPinia())
 app.use(router)
-app.use(Buefy)
+app.use(Buefy, {})
 
 app.mount('#app')

@@ -44,7 +44,7 @@ const loadProducts = () => {
     maxPrice: maxPriceFilter.value || Number.MAX_SAFE_INTEGER,
     categoryId: categoryFilter.value,
     minPrice: minPriceFilter.value || 0,
-    titleQuery: titleFilter.value
+    titleQuery: titleFilter.value || ''
   });
 };
 

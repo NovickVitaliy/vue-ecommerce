@@ -1,8 +1,7 @@
 <template>
   <b-navbar>
     <template #brand>
-      <b-navbar-item tag="router-link" :to="{ path: '/' }">
-
+      <b-navbar-item tag="router-link" :to="{ path: '/home' }">
         <h1>Secret Shop</h1>
       </b-navbar-item>
     </template>

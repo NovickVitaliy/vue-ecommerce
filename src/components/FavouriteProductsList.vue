@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { useFavouriteProductsStore } from "@/store/favourite-products-store";
 import ProductComponent from "@/components/ProductComponent.vue";
-import type { Product } from "@/models/product";
+import {computed} from "vue";
 
 // Access the favourite products store
 const favouriteProductsStore = useFavouriteProductsStore();
-const favouriteProducts: Product[] = favouriteProductsStore.getFavouriteProducts();
+const favouriteProducts = computed(() => favouriteProductsStore.getFavouriteProducts());
 
 </script>
 

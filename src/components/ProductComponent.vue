@@ -3,6 +3,10 @@
     <img :src="product.images[0]" alt="Product Image" class="product-card__image" />
     <h3 class="product-card__title">{{ product.title }}</h3>
     <p class="product-card__price">$ {{ product.price.toFixed(2) }}</p>
+    <div class="d-flex w-100">
+      <button></button>
+      <button></button>
+    </div>
   </div>
 </template>
 
